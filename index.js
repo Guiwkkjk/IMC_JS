@@ -12,7 +12,7 @@ function calculate(){
       text="Você está com sobrepeso"
     } else if (imc > 30 & imc < 35) {
       text="Você está com obesidade 1"
-    } else if (imc > 35 & imc > 40) {
+    } else if (imc > 35 & imc <40) {
       text="Você está com obesidade 2"
     }  else if (imc > 40) {
         text="Você está com obesidade 3"
