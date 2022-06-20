@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append</title>
+    <style>
+   body{
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   .button{
+    border-radius: 0.5em;
+    height: 3.3em;
+    background-color: rgb(214, 110, 214);
+   } 
+   
+   .nome{
+    height: 3em;
+
+   }
+   
+ </style>
+</head>
+<body>
+
+    <h1>Acrescentar elementos:</h1>
+<h3>Com the appendChild() Method</h3>
+
+<h3>Escoha uma cor</h3>
+
+<label><input type="radio" name="cores" value="red"
+    onclick="document.getElementById('myList').style.color='red'">Vermelho</label>
+<label><input type="radio" name="cores" value="blue"
+    onclick="document.getElementById('myList').style.color='blue'">Azul</label>
+<label><input type="radio" name="cores" value="green"
+    onclick="document.getElementById('myList').style.color='green'">Verde</label>
+
+       
+<form id="form">
+    <br> 
+            <input type="text" class="nome" id="nome" value="" placeholder="Digite qualquer coisa">
+            <input type="button" class="button" id="button" value="Enviar">
+        </form>
+    
+    <h3>Sua lista:</h3>
+     <ul id="myList" ></ul>    
+
+    <script>
+           
+        function myFunction() {
+        var input = document.querySelector("#nome")
+        var nome = input.value
+        
+        const node = document.createElement("li");
+        
+        const textnode = document.createTextNode(nome);
+        
+        node.appendChild(textnode);
+        
+        document.getElementById("myList").appendChild(node);
+        
+        }
+
+        document.getElementById("button").addEventListener("click", myFunction)
+        </script>
+
+</body>
+</html>
